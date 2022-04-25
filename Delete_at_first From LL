@@ -1,0 +1,74 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+
+class Node{
+    public:
+    
+    int data;
+    Node*next;
+};
+
+// -----printlist----
+
+void printlist(Node*n){
+    
+    while(n != NULL){
+        cout<<n->data<<endl;
+        n = n->next;
+    }
+}
+      
+   
+      
+ void deleteAtFirst(Node*&head){
+   if(head==NULL){
+      return;
+   }
+    Node*temp=head;
+   head= head->next;
+   delete temp;
+   return;
+}
+
+
+// Driver code
+int main()
+{
+    
+Node* head = NULL;
+Node* second = NULL;
+Node* third  = NULL;
+
+// allocate 3 nodes in the heap----------
+
+head = new Node();
+second =  new Node();
+third  = new Node();
+
+
+head->data = 2;
+head->next = second;
+
+second->data = 3;
+second->next = third;
+
+third->data = 4;
+third->next = NULL;
+
+printlist(head);
+deleteAtFirst(head);
+
+cout<<endl;
+
+return 0;
+}
+
+
+
+
+
+
+
+
