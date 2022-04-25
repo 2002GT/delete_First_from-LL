@@ -19,8 +19,7 @@ void printlist(Node*n){
         n = n->next;
     }
 }
-      
-   
+     -------- function for deletion-------------------------------------
       
  void deleteAtFirst(Node*&head){
    if(head==NULL){
