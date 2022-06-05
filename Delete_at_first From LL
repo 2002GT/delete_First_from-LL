@@ -14,7 +14,8 @@ class Node{
 
 void printlist(Node*n){
     
-    while(n != NULL){
+    while(n != NULL)
+{
         cout<<n->data<<endl;
         n = n->next;
     }
